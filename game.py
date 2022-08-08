@@ -19,3 +19,6 @@ class Game:
         Function that will show the board on
         the command line
         """
+        # a for loop for i in range of 3, which 3 spaces
+        # are chosen which represents the row indices i.e first row = 012
+        for row in [self.board[i*3:(i+i)*3] for i in range(3)]:
