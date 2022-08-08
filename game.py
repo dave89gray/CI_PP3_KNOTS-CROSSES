@@ -14,8 +14,7 @@ class Player:
         def get_next_move(self, game):
             """
             This function ensures each player gets a next
-            move if its available, pass as this is further
-            developed in the user/computer instances
+            move if its available
             """
             pass
 
@@ -32,4 +31,12 @@ class User(Player):
         super().__init__(player)
 
     def get_next_move(self, game):
-        pass
+
+class computer(player):
+        """
+        Function to create instance of user while using
+        super() to inherit player attributes
+        """
+        super().__init__(player)
+
+    def get_next_move(self, game):
