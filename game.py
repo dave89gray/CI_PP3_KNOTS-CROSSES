@@ -59,12 +59,23 @@ class Game:
                 moves.append(i)
             return moves
 
+    def available_selection(self):
+        return " " in self.board
+
 def play_game(Game, player_x, player_0, print_game=True):
     """
     Function for the game to play and pass it the arguments of game,
     and players for x & o. The extra variable for print is included so
     if it is set to True it prints out all steps for the user to
-    play against it
+    play the game. This function is to iterate continually until
+    there are no more moves left i.e someone wins or ties
     """
     if print_game:
+        # Printing the board so the user can see which numbers
+        # are in which position on the board
         game.show_board_layout()
+
+    # Assigns the starting letter as "X"
+    player = "X"
+
+    # Keep iterating through the game while there are moves available
