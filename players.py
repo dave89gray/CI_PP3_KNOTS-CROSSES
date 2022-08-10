@@ -38,6 +38,11 @@ class computer(player):
         Function to create instance of user while using
         super() to inherit player attributes
         """
-        super().__init__(player)
+        def __init__(self, player):
+            
+            super().__init__(player)
 
         def get_next_move(self, game):
+            # Computer to select a random square on the
+            # board thats empty, passing game in as an argument
+            square = random.choice(game.player_moves())
