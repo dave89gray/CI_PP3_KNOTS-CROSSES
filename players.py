@@ -35,7 +35,7 @@ class User(Player):
         """
         Function to allow the uer to imput their choice of square,
         we will check if it is a number or valid input or if the
-        chosen square on the board is not available 
+        chosen square on the board is not available
         """
         check_square = False
         # Default value of None as user is yet to put an input in
@@ -45,7 +45,7 @@ class User(Player):
         while not check_square:
             # Command terminal to show who's turn is it is and prompt
             # a move 0 to 8
-            selection = input(self.player + )
+            selection = input(self.player + '\'s turn. Please choose from (0-8): \n')
 
 
 class Computer(Player):
