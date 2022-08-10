@@ -34,7 +34,9 @@ class Game:
         i.e 0|1|2. Board layout to be populated with a string for each
         i in the range of the board size, create 3 sub-arrays
         """
+
         board_layout = [[str(i) for i in range(j*3, (j+1)*3)] for j in range(3)]
+
         # for loop to add the 3 rows of the board and add columns lines
         for row in board_layout:
             # String concatentation to print vertical lines
@@ -46,11 +48,13 @@ class Game:
         Function to return a list of indices of the available moves
         for a player after they have made a move
         """
+
         # Empty list to add moves to
         moves = []
 
         # Add enumerate to create a list and assign tuples that have
         # the index and the value at the index i.e 0,X 1,X
+
         for (i, place) in enumerate(self.board):
             # For loop to go through each tuple and assign first item to i
             # and the second item to 'place'. if place empty space
@@ -60,6 +64,13 @@ class Game:
             return moves
 
     def available_selection(self):
+        """
+        Function to check if there are any avaialble selections for the
+        game player to make.
+        """
+
+        # Space and self. are to be returned a boolean (true or false)
+        # of whether they are indeed available selections
         return " " in self.board
 
 def play_game(Game, player_x, player_0, print_game=True):
@@ -70,6 +81,7 @@ def play_game(Game, player_x, player_0, print_game=True):
     play the game. This function is to iterate continually until
     there are no more moves left i.e someone wins or ties
     """
+
     if print_game:
         # Printing the board so the user can see which numbers
         # are in which position on the board
@@ -79,3 +91,5 @@ def play_game(Game, player_x, player_0, print_game=True):
     player = "X"
 
     # Keep iterating through the game while there are moves available
+    while game.available_selection():
+        
