@@ -73,6 +73,13 @@ class Game:
         # of whether they are indeed available selections
         return " " in self.board
 
+    def available_selections_left(self):
+        """
+        Function to return the number of empty squares left on the game board
+        """
+        return len(self.player_moves())
+
+
 def play_game(Game, player_x, player_0, print_game=True):
     """
     Function for the game to play and pass it the arguments of game,
