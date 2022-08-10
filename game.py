@@ -30,5 +30,10 @@ class Game:
     def show_board_layout():
         """
         Function to show which numbers are at which spot on the board
-        i.e 0|1|2
+        i.e 0|1|2. Board layout to be populated with a string for each
+        i in the range of the board size, create 3 sub-arrays
         """
+        board_layout = [[str(i) for i in range(j*3, (j+1)*3)] for j in range(3)]
+        #for loop to add the 3 layers of the board and add columns
+        for row in board_layout:
+            print('| ' + ' | '.join(row) + ' |')
