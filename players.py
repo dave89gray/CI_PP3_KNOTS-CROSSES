@@ -32,6 +32,20 @@ class User(Player):
         super().__init__(player)
 
     def get_next_move(self, game):
+        """
+        Function to allow the uer to imput their choice of square,
+        we will check if it is a number or valid input or if the
+        chosen square on the board is not available 
+        """
+        check_square = False
+        # Default value of None as user is yet to put an input in
+        check = None
+
+        # While check_square is false, user selection is going to be 
+        while not check_square:
+            # Command terminal to show who's turn is it is and prompt
+            # a move 0 to 8
+            selection = input(self.player + )
 
 
 class Computer(Player):
@@ -44,7 +58,10 @@ class Computer(Player):
             super().__init__(player)
 
         def get_next_move(self, game):
-            # Computer to select a random square on the
-            # board thats empty, passing our game in as an argument
+            """
+            Function for the Computer to select a random square on the
+            board thats empty, passing our game in as an argument
+            and returning the square the computer chose
+            """ 
             square = random.choice(game.player_moves())
             return square

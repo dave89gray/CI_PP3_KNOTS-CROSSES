@@ -54,7 +54,7 @@ class Game:
         for (i, place) in enumerate(self.board):
             # For loop to go through each tuple and assign first item to i
             # and the second item to 'place'. if place empty space
-            # then its an available move, then add to moves
+            # then its an available move, then add i to the list
             if place == ' ':
                 moves.append(i)
             return moves
