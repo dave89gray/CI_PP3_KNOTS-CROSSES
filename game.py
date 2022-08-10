@@ -58,4 +58,13 @@ class Game:
             if place == ' ':
                 moves.append(i)
             return moves
-            
+
+def play_game(Game, player_x, player_0, print_game=True):
+    """
+    Function for the game to play and pass it the arguments of game,
+    and players for x & o. The extra variable for print is included so
+    if it is set to True it prints out all steps for the user to
+    play against it
+    """
+    if print_game:
+        game.show_board_layout()
