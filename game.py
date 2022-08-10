@@ -24,3 +24,11 @@ class Game:
         for row in [self.board[i*3:(i+i)*3] for i in range(3)]:
             # Print vertical lines for the game board for each row
             print('| ' + ' | '.join(row) + ' |')
+
+    @staticmethod
+    ##
+    def show_board_layout():
+        """
+        Function to show which numbers are at which spot on the board
+        i.e 0|1|2
+        """
