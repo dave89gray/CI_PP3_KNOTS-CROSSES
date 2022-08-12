@@ -118,6 +118,9 @@ def play_game(Game, player_x, player_O, print_game=True):
         else:
             box = player_x.get_next_move(Game)
 
+        # Takes the available squares and player letter as arguments
         if Game.player_move(box, player):
-            if board_layout:
+            if print_game:
                 print(player + f' made a move to {box}')
+                Game.show_board()
+                print('')
