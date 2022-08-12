@@ -85,6 +85,12 @@ class Game:
         the move i.e place a letter in a box and if the move is good
         it is to return true, if the move is invalid it will return false
         """
+        # if statement to check if the selected box is empty (available)
+        if self.board[box] == ' ':
+            self.board[box] = player
+            return True
+        return False
+
 
 def play_game(Game, player_x, player_O, print_game=True):
     """
