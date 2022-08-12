@@ -92,13 +92,15 @@ def play_game(Game, player_x, player_O, print_game=True):
     if print_game:
         # Printing the board so the user can see which numbers
         # are in which position on the board
-        game.show_board_layout()
+        Game.show_board_layout()
 
     # Assigns the starting letter as "X"
     player = "X"
 
     # Keep iterating through the game while there are moves available
-    while game.available_selection():
+    while Game.available_selection():
         # make sure the correct player is making the next move
         if player == 'O':
             box = player_O.get_next_move(Game)
+        else:
+            box = player_x.get_next_move(Game)
