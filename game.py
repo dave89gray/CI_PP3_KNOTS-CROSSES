@@ -131,6 +131,12 @@ def play_game(Game, player_x, player_O, print_game=True):
                 Game.show_board()
                 print('')
 
+            # if the current winner is not set to None anymore, then
+            # a player has won the game
+            if Game.current_winner:
+                if show_board:
+                    print(player + " wins!")
+
             # To alternate players throughout the game
             # We assign player as == to O if the last
             # player was x, otherwise we assign it to x
