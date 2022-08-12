@@ -79,6 +79,12 @@ class Game:
         """
         return len(self.player_moves())
 
+    def player_move(self, box, player):
+        """
+        Function to check if the chosen move is valid, to then make
+        the move i.e place a letter in a box and if the move is good
+        it is to return true, if the move is invalid it will return false
+        """
 
 def play_game(Game, player_x, player_O, print_game=True):
     """
@@ -99,7 +105,8 @@ def play_game(Game, player_x, player_O, print_game=True):
 
     # Keep iterating through the game while there are moves available
     while Game.available_selection():
-        # make sure the correct player is making the next move
+        # make sure the correct player is making the next move, if
+        # its not player O then it's player X
         if player == 'O':
             box = player_O.get_next_move(Game)
         else:
