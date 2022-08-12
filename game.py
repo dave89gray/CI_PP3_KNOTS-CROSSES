@@ -135,7 +135,8 @@ def play_game(Game, player_x, player_O, print_game=True):
             # a player has won the game
             if Game.current_winner:
                 if show_board:
-                    print(player + " wins!")
+                    print(player + " has won!")
+                return player    
 
             # To alternate players throughout the game
             # We assign player as == to O if the last
@@ -144,3 +145,9 @@ def play_game(Game, player_x, player_O, print_game=True):
                 player = "O"
             else:
                 player = "X"
+
+        # If statement for once the game goes through the
+        # while loop, if the game finishes with a tie it'll
+        # be printed to the interface
+        if show_board:
+            print('it\'s a tie!')
