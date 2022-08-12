@@ -80,7 +80,7 @@ class Game:
         return len(self.player_moves())
 
 
-def play_game(Game, player_x, player_0, print_game=True):
+def play_game(Game, player_x, player_O, print_game=True):
     """
     Function for the game to play and pass it the arguments of game,
     and players for x & o. The extra variable for print is included so
@@ -99,4 +99,6 @@ def play_game(Game, player_x, player_0, print_game=True):
 
     # Keep iterating through the game while there are moves available
     while game.available_selection():
-        
+        # make sure the correct player is making the next move
+        if player == 'O':
+            box = player_O.get_next_move(Game)
