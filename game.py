@@ -117,3 +117,7 @@ def play_game(Game, player_x, player_O, print_game=True):
             box = player_O.get_next_move(Game)
         else:
             box = player_x.get_next_move(Game)
+
+        if Game.player_move(box, player):
+            if board_layout:
+                print(player + f' made a move to {box}')
