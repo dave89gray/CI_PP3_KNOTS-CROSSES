@@ -124,3 +124,11 @@ def play_game(Game, player_x, player_O, print_game=True):
                 print(player + f' made a move to {box}')
                 Game.show_board()
                 print('')
+
+            # To alternate players throughout the game
+            # We assign player as == to O if the last
+            # player was x, otherwise we assign it to x
+            if player == 'X':
+                player = "O"
+            else:
+                player = "X"
