@@ -133,6 +133,12 @@ class Game:
         # one diagonal is 0,4 8 and the other is 2,4,6
         if box % 2 == 0:
             diagonal_1 = [self.show_board[i] for i in [0, 4, 8]]
+            # If every chosen box == players selection then return True
+            # for diagonal_1
+            if all([space == player for space in column]):
+                return True
+
+            diagonal_2 = [self.show_board[i] for i in [2, 4, 6]]
 
 
 def play_game(Game, player_x, player_O, print_game=True):
