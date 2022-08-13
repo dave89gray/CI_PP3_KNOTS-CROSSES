@@ -208,3 +208,6 @@ if __name__ == "__main__":
 
     # Assign the Computer to play with the letter O
     player_O - Computer('O')
+
+    # play is assigned an instance of the game play
+    play = Game()
