@@ -200,3 +200,7 @@ def play_game(Game, player_x, player_O, print_game=True):
         # be printed to the interface
         if show_board:
             print('This game is a draw!')
+
+
+if __name__ == "__main__":
+    player_x = User('X')
