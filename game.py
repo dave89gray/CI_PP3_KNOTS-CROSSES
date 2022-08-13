@@ -207,7 +207,10 @@ if __name__ == "__main__":
     player_x = User('X')
 
     # Assign the Computer to play with the letter O
-    player_O - Computer('O')
+    player_O = Computer('O')
 
     # play is assigned an instance of the game play
-    play = Game()
+    p = Game()
+
+    #
+    play_game(Game, player_x, player_O)(p, player_x, player_O, print_game=True)
