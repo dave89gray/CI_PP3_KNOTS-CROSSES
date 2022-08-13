@@ -1,3 +1,4 @@
+from players import User, Computer
 
 class Game:
     """

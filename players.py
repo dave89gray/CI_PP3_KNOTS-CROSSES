@@ -70,7 +70,6 @@ class Computer(Player):
         super() to inherit player attributes
         """
         def __init__(self, player):
-            
             super().__init__(player)
 
         def get_next_move(self, game):
