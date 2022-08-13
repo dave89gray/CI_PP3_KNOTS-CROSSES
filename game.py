@@ -198,8 +198,8 @@ def play_game(Game, player_x, player_O, print_game=True):
         # If statement for once the game goes through the
         # while loop, if the game finishes with a draw it'll
         # be printed to the interface
-        if show_board:
-            print('This game is a draw!')
+    if show_board:
+        print('This game is a draw!')
 
 
 if __name__ == "__main__":
@@ -213,4 +213,4 @@ if __name__ == "__main__":
     p = Game()
 
     #
-    play_game(Game, player_x, player_O)(p, player_x, player_O, print_game=True)
+    play_game(p, player_x, player_O, print_game=True)
