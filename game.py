@@ -109,17 +109,31 @@ class Game:
         row = self.board[row_index*3 : (row_index + 1) * 3]
 
         # if all == True then return True, otherwise it's Falses
-        # with string comprehension,Check for whether that dot == player
-        if all([dot == player for dot in row]):
+        # with string comprehension,Check for whether that space == player
+        # in the row chosen
+        if all([space == player for space in row]):
             return True
 
-        # Check the columns for if we have 3 in a row
+        # Check the columns for if a player has 3 in a row
         column_index = box % 3
 
         # For each row, add the column index to get the value in the column
         # Column is to get eerything in the column the player has moved to
         # and then add to a list
         column = [self.board[column_index+i*3] for i in range(3)]
+
+        # if all == True then return True, otherwise it's Falses
+        # with string comprehension,Check for whether that space == player
+        # in the column chosen
+        if all([space == player for space in column]):
+            return True
+
+        # Check the diagonal for if a player has 3 in a row, the only
+        # way a diaganol could win is if an even box is used (0,2,4,6,8)
+        # one diagonal is 0,4 8 and the other is 2,4,6
+        if box % 2 == 0:
+            diagonal_1 = [self.show_board[i] for i in [0, 4, 8]]
+
 
 def play_game(Game, player_x, player_O, print_game=True):
     """
