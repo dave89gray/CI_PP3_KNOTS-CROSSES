@@ -103,6 +103,12 @@ class Game:
         Function to check if a player has 3 in a row anywhere on the board.
         This could be in any row, column or diagonal
         """
+        row_index = box // 3
+        row = self.board[row_index*3 : (row_index + 1) * 3]
+
+        # Get the row from the row_index
+        if all([dot == player for dot in row]):
+            return True
 
 
 
