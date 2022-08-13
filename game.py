@@ -98,6 +98,14 @@ class Game:
         return False
 
 
+    def Game_winner(self, box, player):
+        """
+        Function to check if a player has 3 in a row anywhere on the board.
+        This could be in any row, column or diagonal
+        """
+
+
+
 def play_game(Game, player_x, player_O, print_game=True):
     """
     Function for the game to play and pass it the arguments of game,
@@ -147,7 +155,7 @@ def play_game(Game, player_x, player_O, print_game=True):
                 player = "X"
 
         # If statement for once the game goes through the
-        # while loop, if the game finishes with a tie it'll
+        # while loop, if the game finishes with a draw it'll
         # be printed to the interface
         if show_board:
-            print('it\'s a tie!')
+            print('This game is a draw!')
