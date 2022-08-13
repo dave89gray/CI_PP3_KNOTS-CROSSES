@@ -104,13 +104,22 @@ class Game:
         This could be in any row, column or diagonal
         """
         row_index = box // 3
-        row = self.board[row_index*3 : (row_index + 1) * 3]
 
         # Get the row from the row_index
+        row = self.board[row_index*3 : (row_index + 1) * 3]
+
+        # if all == True then return True, otherwise it's Falses
+        # with string comprehension,Check for whether that dot == player
         if all([dot == player for dot in row]):
             return True
 
+        # Check the columns for if we have 3 in a row
+        column_index = box % 3
 
+        # For each row, add the column index to get the value in the column
+        # Column is to get eerything in the column the player has moved to
+        # and then add to a list
+        column = [self.board[column_index+i*3] for i in range(3)]
 
 def play_game(Game, player_x, player_O, print_game=True):
     """
