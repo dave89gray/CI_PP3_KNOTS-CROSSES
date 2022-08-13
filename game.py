@@ -135,11 +135,16 @@ class Game:
             diagonal_1 = [self.show_board[i] for i in [0, 4, 8]]
             # If every chosen box == players selection then return True
             # for diagonal_1
-            if all([space == player for space in column]):
+            if all([space == player for space in diagonal_1]):
                 return True
 
             diagonal_2 = [self.show_board[i] for i in [2, 4, 6]]
+            if all([space == player for space in diagonal_2]):
+                return True
 
+        # if all of these checks fail then there is no winner
+        # and we return False to continue the game
+        return False
 
 def play_game(Game, player_x, player_O, print_game=True):
     """
