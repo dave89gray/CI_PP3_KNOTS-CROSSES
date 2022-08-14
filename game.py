@@ -51,11 +51,14 @@ class Game():
         """
         # if statement to check if the selected box is empty (available)
         if self.board[square] == ' ':
+            # If the square is empty then assign the players x or o
             self.board[square] = player
 
             # if statement to check if there is a winner of the game
             # by passing in last move for the check
             if self.game_winner(square, player):
+
+                # Assign the player to current winner if thats the case
                 self.current_winner = player
             return True
         return False
@@ -157,12 +160,12 @@ def play_game(game, player_x, player_o, print_game=True):
 
 
     # Assigns the starting letter as "X"
-    player = "X"
+    player = 'X'
 
     # Keep iterating through the game while there are moves available
     while game.available_selection():
-        # make sure the correct player is making the next move, if
-        # its not player O then it's player X
+        # make sure the correct player is making the next move, if letter
+        # is O then ask O to make move, otherwise its X
         if player == 'O':
             square = player_o.get_next_move(game)
         else:
@@ -174,7 +177,6 @@ def play_game(game, player_x, player_o, print_game=True):
                 print(player + f' made a move to {square}')
                 # Print updated board including the users move
                 game.show_board()
-                print('')
 
             # if the current winner is not set to None anymore, then
             # a player has won the game
@@ -208,5 +210,4 @@ if __name__ == "__main__":
     # play is assigned an instance of the game play
     p = Game()
 
-    #
     play_game(p, player_x, player_o, print_game=True)

@@ -41,7 +41,7 @@ class User(Contestant):
         # Default value of None as user is yet to put an input in
         check = None
 
-        # While check_square is false, user selection is going to be
+        # While check_square is false, user selection is going to be x or o
         while not check_square:
             # Command terminal to show who's turn is it is and prompt
             # a move 0 to 8
