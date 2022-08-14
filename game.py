@@ -44,7 +44,7 @@ class Game():
             # for the game board for each row
             print('| ' + ' | '.join(row) + ' |')
 
-    def player_moves(self):
+    def player_moves(self, square, player):
         """
         Function to return a list of indices of the available moves
         for a player after they have made a move
@@ -161,7 +161,7 @@ def play_game(game, player_X, player_O, print_game=True):
         game.show_board_layout()
 
 
-    # Assigns the starting letter as "X"
+# Assigns the starting letter as "X"
     player = "X"
 
     # Keep iterating through the game while there are moves available
