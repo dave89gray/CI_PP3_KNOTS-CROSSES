@@ -77,7 +77,7 @@ class Game():
         """
         Function to return the number of empty squares left on the game board
         """
-        return len(self.player_moves())
+        return self.board.count(' ')
 
     def player_move(self, square, player):
         """
