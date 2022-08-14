@@ -10,7 +10,7 @@ class Game():
         Create the list with length 9 that represents
         a 3x3 game board
         """
-        self.board = ['  ' for _ in range(9)]
+        self.board = [' ' for _ in range(9)]
 
         # Variable to keep track of who the current winner is
         self.current_winner = None
@@ -114,11 +114,10 @@ class Game():
     def available_selection(self):
         """
         Function to check if there are any avaialble selections for the
-        game player to make.
+        game player to make. available selection is to be returned a
+        boolean (true or false) of whether they are indeed available selections
         """
-        # available selection is to be returned a boolean (true or false)
-        # of whether they are indeed available selections
-        return " " in self.board
+        return ' ' in self.board
 
     def available_selections_left(self):
         """
