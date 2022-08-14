@@ -1,4 +1,5 @@
 from players import User, Computer
+import math
 
 class Game:
     """
@@ -107,7 +108,7 @@ class Game:
         row_index = box // 3
 
         # Get the row from the row_index
-        row = self.board[row_index*3 : (row_index + 1) * 3]
+        row = self.board[row_index*3:(row_index + 1) * 3]
 
         # if all == True then return True, otherwise it's Falses
         # with string comprehension,Check for whether that space == player
