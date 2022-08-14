@@ -47,19 +47,19 @@ class User(Player):
             # a move 0 to 8
             square = input(self.player + '\'s turn. Please choose from (0-8): \n')
 
-        # Try block to test if the user selection is an integer and valid
-        # or the move is not available on the board we
-        # tell the user and raise a Value Error
-        try:
-            check = int(square)
-            if check not in game.player_moves():
-                raise ValueError
+            # Try block to test if the user selection is an integer and valid
+            # or the move is not available on the board we
+            # tell the user and raise a Value Error
+            try:
+                check = int(square)
+                if check not in game.player_moves():
+                    raise ValueError
 
-            # If the selection passes both those check then it's
-            # a valid move and passes true
-            check_square = True
-        except ValueError:
-            print("Ooops, looks like that was an invalid choice, please try again!")
+                # If the selection passes both those check then it's
+                # a valid move and passes true
+                check_square = True
+            except ValueError:
+                print("Ooops, looks like that was an invalid choice, please try again!")
         
         return check
 
