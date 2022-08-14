@@ -156,6 +156,7 @@ def play_game(game, player_x, player_o, print_game=True):
         # Printing the board so the user can see which numbers
         # are in which position on the board
         game.show_board_layout()
+        print('')
 
 
     # Assigns the starting letter as "X"
