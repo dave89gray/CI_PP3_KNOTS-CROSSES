@@ -12,12 +12,12 @@ class Contestant():
         # Set the current instance of player (user or computer)
         self.player = player
 
-        def get_next_move(self, game):
-            """
-            This function ensures each player gets a next
-            move if its available
-            """
-            pass
+    def get_next_move(self, game):
+        """
+        This function ensures each player gets a next
+        move if its available
+        """
+        pass
 
 class User(Contestant):
     """
