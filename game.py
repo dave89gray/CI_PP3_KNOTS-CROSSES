@@ -99,7 +99,7 @@ class Game:
         return False
 
 
-    def Game_winner(self, box, player):
+    def game_winner(self, box, player):
         """
         Function to check if a player has 3 in a row anywhere on the board.
         This could be in any row, column or diagonal
@@ -147,7 +147,7 @@ class Game:
         # and we return False to continue the game
         return False
 
-def play_game(Game, player_x, player_O, print_game=True):
+def play_game(game, player_x, player_O, print_game=True):
     """
     Function for the game to play and pass it the arguments of game,
     and players for x & o. The extra variable for print is included so
@@ -159,33 +159,33 @@ def play_game(Game, player_x, player_O, print_game=True):
     if print_game:
         # Printing the board so the user can see which numbers
         # are in which position on the board
-        Game.show_board_layout()
+        game.show_board_layout()
 
     # Assigns the starting letter as "X"
     player = "X"
 
     # Keep iterating through the game while there are moves available
-    while Game.available_selection():
+    while game.available_selection():
         # make sure the correct player is making the next move, if
         # its not player O then it's player X
         if player == 'O':
-            box = player_O.get_next_move(Game)
+            box = player_O.get_next_move(game)
         else:
-            box = player_x.get_next_move(Game)
+            box = player_x.get_next_move(game)
 
         # Takes the available squares and player letter as arguments
-        if Game.player_move(box, player):
+        if game.player_move(box, player):
             if print_game:
                 print(player + f' made a move to {box}')
-                Game.show_board()
+                game.show_board()
                 print('')
 
             # if the current winner is not set to None anymore, then
             # a player has won the game
-            if Game.current_winner:
-                if show_board:
+            if game.current_winner:
+                if print_game:
                     print(player + " has won!")
-                return player    
+                return player  
 
             # To alternate players throughout the game
             # We assign player as == to O if the last
@@ -195,9 +195,9 @@ def play_game(Game, player_x, player_O, print_game=True):
             else:
                 player = "X"
 
-        # If statement for once the game goes through the
-        # while loop, if the game finishes with a draw it'll
-        # be printed to the interface
+    # If statement for once the game goes through the
+    # while loop, if the game finishes with a draw it'll
+    # be printed to the interface
     if print_game:
         print('This game is a draw!')
 
