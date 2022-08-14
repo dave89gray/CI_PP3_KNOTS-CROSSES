@@ -43,6 +43,38 @@ class Game():
             # for the game board for each row
             print('| ' + ' | '.join(row) + ' |')
 
+    def player_move(self, square, player):
+        """
+        Function to check if the chosen move is valid, to then make
+        the move i.e place a letter in a box and if the move is good
+        it is to return true, if the move is invalid it will return false
+        """
+        # if statement to check if the selected box is empty (available)
+        if self.board[square] == ' ':
+            self.board[square] = player
+
+            # if statement to check if there is a winner of the game
+            # by passing in last move for the check
+            if self.game_winner(square, player):
+                self.current_winner = player
+            return True
+        return False
+
+    def available_selection(self):
+        """
+        Function to check if there are any avaialble selections for the
+        game player to make.
+        """
+        # available selection is to be returned a boolean (true or false)
+        # of whether they are indeed available selections
+        return " " in self.board
+
+    def available_selections_left(self):
+        """
+        Function to return the number of empty squares left on the game board
+        """
+        return self.board.count(' ')
+
     def player_moves(self):
         """
         Function to return a list of indices of the available moves
@@ -60,38 +92,6 @@ class Game():
             if place == ' ':
                 moves.append(i)
         return moves
-
-    def available_selection(self):
-        """
-        Function to check if there are any avaialble selections for the
-        game player to make.
-        """
-        # available selection is to be returned a boolean (true or false)
-        # of whether they are indeed available selections
-        return " " in self.board
-
-    def available_selections_left(self):
-        """
-        Function to return the number of empty squares left on the game board
-        """
-        return self.board.count(' ')
-
-    def player_move(self, square, player):
-        """
-        Function to check if the chosen move is valid, to then make
-        the move i.e place a letter in a box and if the move is good
-        it is to return true, if the move is invalid it will return false
-        """
-        # if statement to check if the selected box is empty (available)
-        if self.board[square] == ' ':
-            self.board[square] = player
-
-            # if statement to check if there is a winner of the game
-            # by passing in last move for the check
-            if self.game_winner(square, player):
-                self.current_winner = player
-            return True
-        return False
 
     def game_winner(self, square, player):
         """
