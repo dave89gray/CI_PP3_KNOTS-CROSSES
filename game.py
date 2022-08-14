@@ -1,5 +1,4 @@
 from players import User, Computer
-import math
 
 class Game:
     """

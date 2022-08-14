@@ -52,8 +52,8 @@ class User(Player):
         # tell the user and raise a Value Error
         try:
             check = int(square)
-            if check not in game.available_moves():
-                raise ValueError()
+            if check not in game.player_moves():
+                raise ValueError
 
             # If the selection passes both those check then it's
             # a valid move and passes true
