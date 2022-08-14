@@ -69,7 +69,6 @@ class Game:
         Function to check if there are any avaialble selections for the
         game player to make.
         """
-
         # Space and self. are to be returned a boolean (true or false)
         # of whether they are indeed available selections
         return " " in self.board
@@ -161,6 +160,7 @@ def play_game(game, player_x, player_O, print_game=True):
         # are in which position on the board
         game.show_board_layout()
 
+
     # Assigns the starting letter as "X"
     player = "X"
 
@@ -169,9 +169,9 @@ def play_game(game, player_x, player_O, print_game=True):
         # make sure the correct player is making the next move, if
         # its not player O then it's player X
         if player == 'O':
-            box = player_O.get_next_move(game)
+            box = player_O.get_move(game)
         else:
-            box = player_x.get_next_move(game)
+            box = player_x.get_move(game)
 
         # Takes the available squares and player letter as arguments
         if game.player_move(box, player):
@@ -185,7 +185,7 @@ def play_game(game, player_x, player_O, print_game=True):
             if game.current_winner:
                 if print_game:
                     print(player + " has won!")
-                return player  
+                return player
 
             # To alternate players throughout the game
             # We assign player as == to O if the last

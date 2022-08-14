@@ -60,7 +60,6 @@ class User(Player):
                 check_square = True
             except ValueError:
                 print("Ooops, looks like that was an invalid choice, please try again!")
-        
         return check
 
 
