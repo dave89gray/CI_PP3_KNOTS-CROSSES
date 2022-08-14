@@ -1,6 +1,6 @@
 import random
 
-class Player:
+class Contestant():
     """
     Base player class for the player of the game which
     the user or computer will be be derived from
@@ -19,11 +19,11 @@ class Player:
             """
             pass
 
-class User(Player):
+class User(Contestant):
     """
     User to inherit the base Player function and develop it
     further into the user
-    """  
+    """
     def __init__(self, player):
         """
         Function to create instance of user while using
@@ -63,7 +63,7 @@ class User(Player):
         return check
 
 
-class Computer(Player):
+class Computer(Contestant):
     """
     Function to create instance of user while using
     super() to inherit player attributes

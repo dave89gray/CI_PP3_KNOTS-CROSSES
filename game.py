@@ -1,15 +1,15 @@
 from players import User, Computer
 
-class Game:
+class Game():
     """
     Main class for the game to be played
     """
     def __init__(self):
         """
         Function to create the game board
+        Create the list with length 9 that represents
+        a 3x3 game board
         """
-        # Create the list with length 9 that represents
-        # a 3x3 game board
         self.board = ['  ' for _ in range(9)]
 
         # Variable to keep track of who the current winner is
@@ -79,31 +79,31 @@ class Game:
         """
         return len(self.player_moves())
 
-    def player_move(self, box, player):
+    def player_move(self, square, player):
         """
         Function to check if the chosen move is valid, to then make
         the move i.e place a letter in a box and if the move is good
         it is to return true, if the move is invalid it will return false
         """
         # if statement to check if the selected box is empty (available)
-        if self.board[box] == ' ':
-            self.board[box] = player
+        if self.board[square] == ' ':
+            self.board[square] = player
 
             # if statement to check if there is a winner of the game
             # by passing in last move for the check
-            if self.game_winner(box, player):
+            if self.game_winner(square, player):
                 self.current_winner = player
 
             return True
         return False
 
 
-    def game_winner(self, box, player):
+    def game_winner(self, square, player):
         """
         Function to check if a player has 3 in a row anywhere on the board.
         This could be in any row, column or diagonal
         """
-        row_index = box // 3
+        row_index = square // 3
 
         # Get the row from the row_index
         row = self.board[row_index*3:(row_index + 1) * 3]
@@ -115,7 +115,7 @@ class Game:
             return True
 
         # Check the columns for if a player has 3 in a row
-        column_index = box % 3
+        column_index = square % 3
 
         # For each row, add the column index to get the value in the column
         # Column is to get eerything in the column the player has moved to
@@ -131,7 +131,7 @@ class Game:
         # Check the diagonal for if a player has 3 in a row, the only
         # way a diaganol could win is if an even box is used (0,2,4,6,8)
         # one diagonal is 0,4 8 and the other is 2,4,6
-        if box % 2 == 0:
+        if square % 2 == 0:
             diagonal_1 = [self.board[i] for i in [0, 4, 8]]
             # If every chosen box == players selection then return True
             # for diagonal_1
@@ -146,7 +146,7 @@ class Game:
         # and we return False to continue the game
         return False
 
-def play_game(game, player_x, player_O, print_game=True):
+def play_game(game, player_X, player_O, print_game=True):
     """
     Function for the game to play and pass it the arguments of game,
     and players for x & o. The extra variable for print is included so
@@ -169,14 +169,14 @@ def play_game(game, player_x, player_O, print_game=True):
         # make sure the correct player is making the next move, if
         # its not player O then it's player X
         if player == 'O':
-            box = player_O.get_move(game)
+            square = player_O.get_next_move(game)
         else:
-            box = player_x.get_move(game)
+            square = player_X.get_next_move(game)
 
         # Takes the available squares and player letter as arguments
-        if game.player_move(box, player):
+        if game.player_move(square, player):
             if print_game:
-                print(player + f' made a move to {box}')
+                print(player + f' made a move to {square}')
                 game.show_board()
                 print('')
 
@@ -204,7 +204,7 @@ def play_game(game, player_x, player_O, print_game=True):
 
 if __name__ == "__main__":
     # Assign the User to play with the letter X
-    player_x = User('X')
+    player_X = User('X')
 
     # Assign the Computer to play with the letter O
     player_O = Computer('O')
@@ -213,4 +213,4 @@ if __name__ == "__main__":
     p = Game()
 
     #
-    play_game(p, player_x, player_O, print_game=True)
+    play_game(p, player_X, player_O, print_game=True)
