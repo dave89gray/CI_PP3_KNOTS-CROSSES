@@ -92,7 +92,7 @@ class Game:
 
             # if statement to check if there is a winner of the game
             # by passing in last move for the check
-            if self.winner(box, player):
+            if self.game_winner(box, player):
                 self.current_winner = player
 
             return True
