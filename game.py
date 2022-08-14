@@ -133,13 +133,13 @@ class Game:
         # way a diaganol could win is if an even box is used (0,2,4,6,8)
         # one diagonal is 0,4 8 and the other is 2,4,6
         if box % 2 == 0:
-            diagonal_1 = [self.show_board[i] for i in [0, 4, 8]]
+            diagonal_1 = [self.board[i] for i in [0, 4, 8]]
             # If every chosen box == players selection then return True
             # for diagonal_1
             if all([space == player for space in diagonal_1]):
                 return True
 
-            diagonal_2 = [self.show_board[i] for i in [2, 4, 6]]
+            diagonal_2 = [self.board[i] for i in [2, 4, 6]]
             if all([space == player for space in diagonal_2]):
                 return True
 

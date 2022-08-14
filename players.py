@@ -45,7 +45,7 @@ class User(Player):
         while not check_square:
             # Command terminal to show who's turn is it is and prompt
             # a move 0 to 8
-            box = input(self.player + '\'s turn. Please choose from (0-8): \n')
+            selection = input(self.player + '\'s turn. Please choose from (0-8): \n')
 
         # Try block to test if the user selection is an integer and valid
         # or the move is not available on the board we
@@ -65,18 +65,18 @@ class User(Player):
 
 
 class Computer(Player):
-        """
-        Function to create instance of user while using
-        super() to inherit player attributes
-        """
-        def __init__(self, player):
-            super().__init__(player)
+    """
+    Function to create instance of user while using
+    super() to inherit player attributes
+    """
+    def __init__(self, player):
+        super().__init__(player)
 
-        def get_next_move(self, game):
-            """
-            Function for the Computer to select a random square on the
-            board thats empty, passing our game in as an argument
-            and returning the square the computer chose
-            """
-            square = random.choice(game.player_moves())
-            return square
+    def get_next_move(self, game):
+        """
+        Function for the Computer to select a random square on the
+        board thats empty, passing our game in as an argument
+        and returning the square the computer chose
+        """
+        square = random.choice(game.player_moves())
+        return square
