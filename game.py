@@ -66,7 +66,7 @@ class Game():
         Function to check if there are any avaialble selections for the
         game player to make.
         """
-        # Space and self. are to be returned a boolean (true or false)
+        # available selection is to be returned a boolean (true or false)
         # of whether they are indeed available selections
         return " " in self.board
 
@@ -90,7 +90,6 @@ class Game():
             # by passing in last move for the check
             if self.game_winner(square, player):
                 self.current_winner = player
-
             return True
         return False
 
@@ -173,6 +172,7 @@ def play_game(game, player_X, player_O, print_game=True):
         if game.player_move(square, player):
             if print_game:
                 print(player + f' made a move to {square}')
+                # Print updated board including the users move
                 game.show_board()
                 print('')
 
