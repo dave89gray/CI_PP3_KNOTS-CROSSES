@@ -60,39 +60,6 @@ class Game():
             return True
         return False
 
-    def available_selection(self):
-        """
-        Function to check if there are any avaialble selections for the
-        game player to make.
-        """
-        # available selection is to be returned a boolean (true or false)
-        # of whether they are indeed available selections
-        return " " in self.board
-
-    def available_selections_left(self):
-        """
-        Function to return the number of empty squares left on the game board
-        """
-        return self.board.count(' ')
-
-    def player_moves(self):
-        """
-        Function to return a list of indices of the available moves
-        for a player after they have made a move
-        """
-        # Empty list to add moves to
-        moves = []
-
-        # Add enumerate to create a list and assign tuples that have
-        # the index and the value at the index i.e 0,X 1,X
-        for (i, place) in enumerate(self.board):
-            # For loop to go through each tuple and assign first item to i
-            # and the second item to 'place'. if place empty space
-            # then its an available move, then add i to the list
-            if place == ' ':
-                moves.append(i)
-        return moves
-
     def game_winner(self, square, player):
         """
         Function to check if a player has 3 in a row anywhere on the board.
@@ -141,7 +108,40 @@ class Game():
         # and we return False to continue the game
         return False
 
-def play_game(game, player_X, player_O, print_game=True):
+    def available_selection(self):
+        """
+        Function to check if there are any avaialble selections for the
+        game player to make.
+        """
+        # available selection is to be returned a boolean (true or false)
+        # of whether they are indeed available selections
+        return " " in self.board
+
+    def available_selections_left(self):
+        """
+        Function to return the number of empty squares left on the game board
+        """
+        return self.board.count(' ')
+
+    def player_moves(self):
+        """
+        Function to return a list of indices of the available moves
+        for a player after they have made a move
+        """
+        # Empty list to add moves to
+        moves = []
+
+        # Add enumerate to create a list and assign tuples that have
+        # the index and the value at the index i.e 0,X 1,X
+        for (i, place) in enumerate(self.board):
+            # For loop to go through each tuple and assign first item to i
+            # and the second item to 'place'. if place empty space
+            # then its an available move, then add i to the list
+            if place == ' ':
+                moves.append(i)
+        return moves
+
+def play_game(game, player_x, player_o, print_game=True):
     """
     Function for the game to play and pass it the arguments of game,
     and players for x & o. The extra variable for print is included so
@@ -156,7 +156,7 @@ def play_game(game, player_X, player_O, print_game=True):
         game.show_board_layout()
 
 
-# Assigns the starting letter as "X"
+    # Assigns the starting letter as "X"
     player = "X"
 
     # Keep iterating through the game while there are moves available
@@ -164,9 +164,9 @@ def play_game(game, player_X, player_O, print_game=True):
         # make sure the correct player is making the next move, if
         # its not player O then it's player X
         if player == 'O':
-            square = player_O.get_next_move(game)
+            square = player_o.get_next_move(game)
         else:
-            square = player_X.get_next_move(game)
+            square = player_x.get_next_move(game)
 
         # Takes the available squares and player letter as arguments
         if game.player_move(square, player):
@@ -200,13 +200,13 @@ def play_game(game, player_X, player_O, print_game=True):
 
 if __name__ == "__main__":
     # Assign the User to play with the letter X
-    player_X = User('X')
+    player_x = User('X')
 
     # Assign the Computer to play with the letter O
-    player_O = Computer('O')
+    player_o = Computer('O')
 
     # play is assigned an instance of the game play
     p = Game()
 
     #
-    play_game(p, player_X, player_O, print_game=True)
+    play_game(p, player_x, player_o, print_game=True)
