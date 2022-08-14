@@ -52,7 +52,7 @@ class User(Contestant):
             # tell the user and raise a Value Error
             try:
                 check = int(square)
-                if check not in game.player_moves():
+                if check not in game.player_moves_available():
                     raise ValueError
 
                 # If the selection passes both those check then it's
@@ -77,5 +77,5 @@ class Computer(Contestant):
         board thats empty, passing our game in as an argument
         and returning the square the computer chose
         """
-        square = random.choice(game.player_moves())
+        square = random.choice(game.player_moves_available())
         return square

@@ -123,7 +123,7 @@ class Game():
         """
         return self.board.count(' ')
 
-    def player_moves(self):
+    def player_moves_available(self):
         """
         Function to return a list of indices of the available moves
         for a player after they have made a move
