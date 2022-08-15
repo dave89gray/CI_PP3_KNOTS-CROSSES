@@ -155,6 +155,22 @@ def play_game(game, player_x, player_o, print_game=True):
     if print_game:
         # Printing the board so the user can see which numbers
         # are in which position on the board
+        print("Welcome to Knoughts and Crosses")
+        print("""
+
+                    |          |
+                    |          |
+              ______|__________|_______
+                    |          |
+                    |          |
+                    |          |
+                    |          |
+              ______|__________|_______
+                    |          |
+                    |          |
+
+        """)
+        print('Shall we play a game')
         game.show_board_layout()
         print('')
 
