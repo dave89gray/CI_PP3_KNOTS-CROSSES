@@ -157,16 +157,16 @@ def play_game(game, player_x, player_o, print_game=True):
         # are in which position on the board
         print("Welcome to Knoughts and Crosses")
         print("""
-                    |          |
-                    |          |
-              ______|__________|_______
-                    |          |
-                    |          |
-                    |          |
-                    |          |
-              ______|__________|_______
-                    |          |
-                    |          |
+        |          |
+        |          |
+  ______|__________|_______
+        |          |
+        |          |
+        |          |
+        |          |
+  ______|__________|_______
+        |          |
+        |          |
         """)
         print('Shall we play a game? \n')
         game.show_board_layout()
