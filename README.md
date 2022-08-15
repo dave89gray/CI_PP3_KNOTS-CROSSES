@@ -29,3 +29,41 @@ The deployment terminal is set to 80 columns by 24 rows. That means that each li
 
 -----
 Happy coding!
+
+# Knoughts and Crosses
+(Developer: David Gray)
+
+![Home Screen]
+
+## Table of Contents
+
+1.  [Project Goals](#project-goals)
+    1.  [User Goals](#user-goals)
+    2.  [Site Owner Goals](#site-owner-goals)
+2.  [User Experience](#user-experience)
+    1.  [Target Audience](#target-audience)
+    2.  [User requirements and Expectations](#user-requirements-and-expectations)
+    3.  [User Stories](#user-stories)
+    4.  [Site Owner Stories](#site-owner-stories)
+3.  [Design](#design)
+    1.  [Flowchart](#flowchart)
+4.  [Technologies Used](#technologies-used)
+    1.  [Languages](#languages)
+    2.  [Frameworks and Tools](#frameworks-and-tools)
+5.  [Features](#features)
+6.  [Validation](#validation)
+    1.  [PEP8](#pep8)
+    2.  [Test User Stories](#test-user-stories)
+7.  [Bugs](#bugs)
+8.  [Deployment](#deployment)
+9.  [Credits](credits)
+10. [Acknowledgments](#acknowledgments)
+
+## Project Goals
+Knoughts and Crosses is an app of the classic that the user can play in the terminal.
+
+### User Goals
+-
+
+### Site Owner Goals
+-
