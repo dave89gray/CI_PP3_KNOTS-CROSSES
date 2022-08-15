@@ -1,5 +1,6 @@
 import random
 
+
 class Contestant():
     """
     Base player class for the player of the game which
@@ -18,6 +19,7 @@ class Contestant():
         move if its available
         """
         pass
+
 
 class User(Contestant):
     """

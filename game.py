@@ -1,5 +1,6 @@
 from players import User, Computer
 
+
 class Game:
     """
     Main class for the game baord to be played and some logic
@@ -34,7 +35,6 @@ class Game:
         i.e 0|1|2. Board layout to be populated with a string for each
         i in the range of the board size, create 3 sub-arrays
         """
-
         game_board = [[str(i) for i in range(j*3, (j+1)*3)] for j in range(3)]
 
         # for loop to add the 3 rows of the board and add columns lines
@@ -57,7 +57,6 @@ class Game:
             # if statement to check if there is a winner of the game
             # by passing in last move for the check
             if self.game_winner(square, player):
-
                 # Assign the player to current winner if thats the case
                 self.current_winner = player
             return True
@@ -136,13 +135,14 @@ class Game:
         # Add enumerate to create a list and assign tuples that have
         # the index and the value at the index i.e 0,X 1,X
         for (i, place) in enumerate(self.board):
-            
+
             # For loop to go through each tuple and assign first item to i
             # and the second item to 'place'. if place empty space
             # then its an available move, then add i to the list
             if place == ' ':
                 moves.append(i)
         return moves
+
 
 def play_game(game, player_x, player_o, print_game=True):
     """
@@ -152,7 +152,6 @@ def play_game(game, player_x, player_o, print_game=True):
     play the game. This function is to iterate continually until
     there are no more moves left i.e someone wins or ties
     """
-
     if print_game:
         # Printing the board so the user can see which numbers
         # are in which position on the board
@@ -172,7 +171,6 @@ def play_game(game, player_x, player_o, print_game=True):
         print('Lets play a game! \n')
         game.show_board_layout()
         print('')
-
 
     # Assigns the starting letter as "X"
     player = 'X'
