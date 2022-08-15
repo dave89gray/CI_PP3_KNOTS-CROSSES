@@ -168,7 +168,7 @@ def play_game(game, player_x, player_o, print_game=True):
         |          |
         |          |
         """)
-        print('Shall we play a game? \n')
+        print('Lets play a game! \n')
         game.show_board_layout()
         print('')
 
