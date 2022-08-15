@@ -1,8 +1,8 @@
 from players import User, Computer
 
-class Game():
+class Game:
     """
-    Main class for the game to be played
+    Main class for the game baord to be played and some logic
     """
     def __init__(self):
         """
@@ -175,6 +175,7 @@ def play_game(game, player_x, player_o, print_game=True):
         if game.player_move(square, player):
             if print_game:
                 print(player + f' made a move to {square}')
+                print('')
                 # Print updated board including the users move
                 game.show_board()
 
