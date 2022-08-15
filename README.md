@@ -56,14 +56,37 @@ Happy coding!
     2.  [Test User Stories](#test-user-stories)
 7.  [Bugs](#bugs)
 8.  [Deployment](#deployment)
-9.  [Credits](credits)
-10. [Acknowledgments](#acknowledgments)
+9.  [Future Considerations](future-considerations)
+10. [Credits](credits)
+11. [Acknowledgments](#acknowledgments)
 
 ## Project Goals
 Knoughts and Crosses is an app of the classic that the user can play in the terminal.
 
 ### User Goals
--
+- Enjoy a game of Knoughts and Crosses
 
 ### Site Owner Goals
--
+- Offer a simple and easy to use game to players who want some relaxing fun
+
+## User Experience
+
+### Target Audience
+- Knoughts and Crosses Enthusiasts
+- Children who want to learn the game
+
+### User Requirements and Expectations
+- That the game is easy to use
+- That the game is easy to understand
+- That the game is easy to read on the terminal
+
+### User Stories
+- As a user, I want to be able to see what numbers correspond to which square
+- As a user, I want to be able to choose which square my letter goes into
+- As a user, I want to have an opponent
+- As a user, I want to see the winner
+
+### Site Owner Stories
+- As a site owner, I want the user to select whichever square they want
+- As a site owner, I want the user to get feedback on who won the game
+- As a site owner, I was the user to have fun!
