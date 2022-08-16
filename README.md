@@ -66,12 +66,12 @@ Knoughts and Crosses is an app of the classic that the user can play in the term
 ### Flowchart
 <details><summary>Flowchart</summary>
 <img src="documents/flowchart_knoughts_and_crosses.png">
-</detials>
+</details>
 
 ## Technologies Used
 
 ### Languages
-- Python3
+- Python 3
 
 ### Frameworks and Tools
 - GitHub
@@ -84,38 +84,57 @@ Knoughts and Crosses is an app of the classic that the user can play in the term
 ### Welcome Message
 - The welcome message is printed welcome message and ASCII art of a Knoughts and Crossed board
 
-<details><summary></summary>
-<img src="docs/features">
+<details><summary>Welcome Message</summary>
+<img src="documents/features/features_welcome_message.png">
 </details>
 
 ### Game Board
 - Shows the user the game board and which numbers apply to which square
-- User stories
+- User stories 1, 3
 
-<details><summary></summary>
-<img src="docs/features">
+<details><summary>Game Board</summary>
+<img src="documents/features/features_game_board.png">
 </details>
 
 ### User Input
+- Input line for the user to make their selection
+- User stories 2, 5
 
-<details><summary></summary>
-<img src="docs/features">
+<details><summary>User Input</summary>
+<img src="documents/features/features_user_input.png">
 </details>
 
 ### Game Progressing
+- Each players selection should progressively populate the board
+- User story 3, 4
 
-<details><summary></summary>
-<img src="docs/features">
+<details><summary>Game Progressing</summary>
+<img src="documents/features/features_game_progressing.png">
 </details>
 
 ### Alternating Players
-<img src="docs/features">
+- There has to be an opponent to play against and no player can play more than one shot at a time
+- User story 4, 5
+
+<details><summary>Alternating Players</summary>
+<img src="documents/features/features_alternating_players.png">
 </details>
 
 ### Feedback error
-<img src="docs/features">
+- The user is to be alerted if they make an invalid choice of input
+
+<details><summary>Feedback Error</summary>
+<img src="documents/features/features_feedback_error.png">
 </details>
 
 ### Winner
-<img src="docs/features">
+- The user should be alerted if there is a winner
+- User story 6
+
+<details><summary></summary>
+<img src="documents/features/features">
 </details>
+
+## Validation
+
+### PEP8 Validation
