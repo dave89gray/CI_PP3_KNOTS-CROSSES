@@ -52,6 +52,7 @@ Knoughts and Crosses is an app of the classic that the user can play in the term
 - As a user, I want to be able to see what numbers correspond to which square
 - As a user, I want to be able to choose which square my letter goes into
 - As a user, I want to have an opponent
+- As a user, I want to see who's turn it is next
 - As a user, I want to see the winner
 
 ### Site Owner Stories
@@ -104,6 +105,10 @@ Knoughts and Crosses is an app of the classic that the user can play in the term
 </details>
 
 ### Alternating Players
+<img src="docs/features">
+</details>
+
+### Feedback error
 <img src="docs/features">
 </details>
 
