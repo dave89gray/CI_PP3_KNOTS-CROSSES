@@ -57,9 +57,9 @@ Knoughts and Crosses is an app of the classic that the user can play in the term
 6. As a user, I want to see the winner
 
 ### Site Owner Stories
-- As a site owner, I want the user to select whichever square they want
-- As a site owner, I want the user to get feedback on who won the game
-- As a site owner, I was the user to have fun!
+7. As a site owner, I want the user to select whichever square they want
+8. As a site owner, I want the user to get feedback on who won the game
+9. As a site owner, I was the user to have fun!
 
 ## Design
 
