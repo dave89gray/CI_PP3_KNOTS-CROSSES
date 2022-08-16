@@ -18,7 +18,6 @@ class Contestant():
         This function ensures each player gets a next
         move if its available
         """
-        pass
 
 
 class User(Contestant):
