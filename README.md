@@ -1,4 +1,4 @@
-# Knoughts and Crosses
+# Noughts and Crosses
 (Developer: David Gray)
 
 ![Home Screen](documents/features/features_home_screen.png)
@@ -30,10 +30,10 @@
 11. [Acknowledgments](#acknowledgments)
 
 ## Project Goals
-Knoughts and Crosses is an app of the classic that the user can play in the terminal.
+Noughts and Crosses is an app of the classic that the user can play in the terminal.
 
 ### User Goals
-- Enjoy a game of Knoughts and Crosses
+- Enjoy a game of KnoughNoughtsts and Crosses
 
 ### Site Owner Goals
 - Offer a simple and easy to use game to players who want some relaxing fun
@@ -41,7 +41,7 @@ Knoughts and Crosses is an app of the classic that the user can play in the term
 ## User Experience
 
 ### Target Audience
-- Knoughts and Crosses Enthusiasts
+- Noughts and Crosses Enthusiasts
 - Children who want to learn the game
 
 ### User Requirements and Expectations
