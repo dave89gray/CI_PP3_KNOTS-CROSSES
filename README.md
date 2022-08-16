@@ -76,3 +76,37 @@ Knoughts and Crosses is an app of the classic that the user can play in the term
 - GitPod
 - Git
 - Lucid Charts - to create Flowchart
+
+## Features
+
+### Welcome Message
+- The welcome message is printed welcome message and ASCII art of a Knoughts and Crossed board
+
+<details><summary></summary>
+<img src="docs/features">
+</details>
+
+### Game Board
+<details><summary></summary>
+<img src="docs/features">
+</details>
+
+### User Input
+
+<details><summary></summary>
+<img src="docs/features">
+</details>
+
+### Game Progressing
+
+<details><summary></summary>
+<img src="docs/features">
+</details>
+
+### Alternating Players
+<img src="docs/features">
+</details>
+
+### Winner
+<img src="docs/features">
+</details>
