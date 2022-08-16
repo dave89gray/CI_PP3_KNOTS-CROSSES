@@ -47,7 +47,7 @@ class User(Contestant):
         while not check_square:
             # Command terminal to show who's turn is it is and prompt
             # a move 0 to 8
-            square = input(self.player + '\'s turn. Please choose from (0-8):')
+            square = input(self.player + "s turn. Please choose from (0-8):\n")
 
             # Try block to test if the user selection is an integer and valid
             # or the move is not available on the board we
