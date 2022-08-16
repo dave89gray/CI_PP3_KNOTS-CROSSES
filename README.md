@@ -1,7 +1,7 @@
 # Knoughts and Crosses
 (Developer: David Gray)
 
-![Home Screen]
+![Home Screen](documents/features/features_home_screen.png)
 
 ## Table of Contents
 
