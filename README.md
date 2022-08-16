@@ -49,11 +49,12 @@ Knoughts and Crosses is an app of the classic that the user can play in the term
 - That the game is easy to read on the terminal
 
 ### User Stories
-- As a user, I want to be able to see what numbers correspond to which square
-- As a user, I want to be able to choose which square my letter goes into
-- As a user, I want to have an opponent
-- As a user, I want to see who's turn it is next
-- As a user, I want to see the winner
+1. As a user, I want to be able to see what numbers correspond to which square
+2. As a user, I want to be able to choose which square my letter goes into
+3. As a user, i want to see my selection appear on the game board
+4. As a user, I want to have an opponent
+5. As a user, I want to see who's turn it is next
+6. As a user, I want to see the winner
 
 ### Site Owner Stories
 - As a site owner, I want the user to select whichever square they want
@@ -88,6 +89,9 @@ Knoughts and Crosses is an app of the classic that the user can play in the term
 </details>
 
 ### Game Board
+- Shows the user the game board and which numbers apply to which square
+- User stories
+
 <details><summary></summary>
 <img src="docs/features">
 </details>
