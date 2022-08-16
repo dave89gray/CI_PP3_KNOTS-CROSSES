@@ -90,3 +90,21 @@ Knoughts and Crosses is an app of the classic that the user can play in the term
 - As a site owner, I want the user to select whichever square they want
 - As a site owner, I want the user to get feedback on who won the game
 - As a site owner, I was the user to have fun!
+
+## Design
+
+### Flowchart
+<details><summary>Flowchart</summary>
+<img src="documents/flowchart_knoughts_and_crosses.png">
+</detials>
+
+## Technologies Used
+
+### Languages
+- Python3
+
+### Frameworks and Tools
+- GitHub
+- GitPod
+- Git
+- Lucid Charts - to create Flowchart
