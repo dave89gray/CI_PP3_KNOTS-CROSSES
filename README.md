@@ -237,3 +237,13 @@ All the code pases with no errors and no warnings.
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
 | Enjoyment | Play the game | User has fun | Hopefully the user had lots of fun playing the game :) |
+
+
+## Bugs
+
+| **Bug** | **Fix** |
+| ----------- | ----------- |
+| The game would not work due to extra blank spaces in line 14 of run.py | Remove extra blank space |
+| The game would not detect a winner of the game | Fix line 98 so it returns an even number (% 2 ==0) |
+| Class Players would not allow the functions within to be used in the run.py file | Change the class name to Contestants |
+| Game wouldnt print when a player had made a selections | Add an f(string) on line 190 of run.py |
