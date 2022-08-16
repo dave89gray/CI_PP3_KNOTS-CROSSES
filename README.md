@@ -247,3 +247,47 @@ All the code pases with no errors and no warnings.
 | The game would not detect a winner of the game | Fix line 98 so it returns an even number (% 2 ==0) |
 | Class Players would not allow the functions within to be used in the run.py file | Change the class name to Contestants |
 | Game wouldnt print when a player had made a selections | Add an f(string) on line 190 of run.py |
+
+## Deployment
+
+The website was deployed using Heroku by following these steps (taken from Code Institute):
+1. Use the "pip freeze -> requiremnts.txt" command in the terminal to save any libraries that need to be instaled in the file as instructed by Code Institute.
+2. Login or create a Heroku account
+3. Click the "new" button in the upper right corner and select "create new app"
+4. Choose an app name and your region and click "Create app"
+5. Go to the "settings" tab, add the python build pack and then the node.js build pack
+6. Go to the "deploy" tab and pick GitHub as a deployment method
+7. Search for a repository to connect to
+8. Click enable automatic deploys and then deploy branch
+9. Wait for the app to build and then click on the "View" link
+
+You can fork the repository by following these steps:
+1. Go to the GitHub repository
+2. Click on the Fork button in the upper right-hand corner
+
+## Future Considerations
+
+I would have liked time to work on this and develop the game further. Some improvements i would make in the future are below:
+1. I would have a separate file for the welcome message to tidy the code up. This would also require User Input to confirm they want to play the game.
+2. I would create a choice so that the user could decide to play the computer or another person.
+3. I would add a loop at the end of the game so the user is offered to play again.
+
+## Credits
+- The idea to create this game came from my neice who asked me for a game when i was visiting home.
+
+### Code
+- Guidance for creating the app from here - https://www.askpython.com/python/examples/tic-tac-toe-using-python 
+- Guidance for creating the app from here - https://youtu.be/8ext9G7xspg?t=2169
+- Guidance for using enumerate - https://realpython.com/python-enumerate/
+- Further information for Try Except - https://www.w3schools.com/python/python_try_except.asp
+- Further information for @staticmethod - https://www.tutorialsteacher.com/python/staticmethod-decorator
+- Guidance for printing the ASCII art - https://www.youtube.com/watch?v=arcFqEuV_XQ
+- Guidance on the README file structure was taken from my first two Code Institute Project Milestones.
+
+### Media
+- ASCII art was taken from - https://ascii.co.uk/art/tictactoe
+
+## Acknowledgements
+I would like to take the opportunity to thanks:
+- My family and girlfriend for supporting me throughout.
+- The incredible Code Institute Tutor staff who are always patient and helpful no matter what.
